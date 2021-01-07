@@ -8,11 +8,11 @@ const CurrentTime = ({ dt }) => {
   const gmtHours = gmt.getHours();
   const gmtMinutes = gmt.getMinutes();
   const gmtDay = gmt.getDay();
-  const gmtFullDay = gmt.getTime();
+  const gmtFullDay = gmt.getDate();
 
   return (
     <div className="currenttime-container">
-      {/* <div>{gmtFullDay}</div> */}
+      <div>{gmtFullDay}</div>
       <div className="currenttime-day-hours">
         <div>{getDayOfWeek(gmtDay)}</div>
         <div className="currenttime-hours">{`${gmtHours}:${gmtMinutes}`}</div>
