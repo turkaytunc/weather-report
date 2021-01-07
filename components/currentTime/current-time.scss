@@ -1,0 +1,21 @@
+.currenttime-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  padding: 0 0.2em;
+  font-size: 1.5em;
+}
+
+.currenttime-day-hours {
+  display: flex;
+
+  div:nth-child(1) {
+    padding-right: 0.2em;
+  }
+}
+
+.currenttime-hours {
+  width: max-content;
+}
