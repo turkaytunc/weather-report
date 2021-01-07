@@ -1,0 +1,11 @@
+.weather-description-container {
+  display: flex;
+  padding: 0 0.2em;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    border-radius: 50%;
+    background-color: rgb(118, 146, 230);
+  }
+}
