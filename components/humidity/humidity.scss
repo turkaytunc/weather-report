@@ -1,0 +1,12 @@
+.humidity-container {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  padding: 0 0.2em;
+  img {
+    margin-right: 0.3em;
+    height: 32px;
+    width: 32px;
+  }
+}
