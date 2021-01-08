@@ -56,7 +56,10 @@ const CurrentWeather = () => {
           <div className="current-weather-icon-container">
             <div className="current-weather-time-desc">
               <CurrentTime dt={data?.current?.dt} />
-              <WeatherDescription desc={data?.current?.weather.description} iconCode={data?.current?.weather.icon} />
+              <WeatherDescription
+                desc={data?.current?.weather[0].description}
+                iconCode={data?.current?.weather[0].icon}
+              />
             </div>
             <div className="current-weather-details">
               <Temperature temp={data?.current?.temp} />
