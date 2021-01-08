@@ -2,8 +2,8 @@ import { fetchWeatherData } from '../../util/fetchWeatherData';
 import { WEATHER_FAIL, WEATHER_REQUEST, WEATHER_SUCCESS } from '../constants/weatherConstants';
 
 const weatherFetchUrl = {
-  latitude: '41.5',
-  longitude: '26.5',
+  latitude: '41.676',
+  longitude: '26.557',
   apiKey: process.env.REACT_APP_API_KEY,
   units: 'metric',
   language: 'tr',

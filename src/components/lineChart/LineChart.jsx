@@ -3,7 +3,8 @@ import { Line } from 'react-chartjs-2';
 import './line-chart.scss';
 
 function LineChart({ timeStamps = [], metric = [] }) {
-  const negative = metric.some((e) => e < 0);
+  const minValue = Math.min(...metric);
+  const maxValue = Math.max(...metric);
   return (
     <div className="line-chart-container">
       <Line
@@ -26,8 +27,8 @@ function LineChart({ timeStamps = [], metric = [] }) {
             yAxes: [
               {
                 ticks: {
-                  suggestedMax: 50,
-                  suggestedMin: negative ? -20 : 0,
+                  suggestedMax: maxValue,
+                  suggestedMin: minValue,
                   beginAtZero: true,
                 },
               },

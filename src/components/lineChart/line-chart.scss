@@ -4,17 +4,18 @@
   width: 100%;
   justify-self: center;
   align-self: center;
+  background-color: #e8eff3;
 }
 
 @media screen and (min-width: 400px) {
   .line-chart-container {
-    height: 330px;
+    height: 300px;
   }
 }
 
 @media screen and (min-width: 600px) {
   .line-chart-container {
-    height: 500px;
+    height: 350px;
   }
 }
 
