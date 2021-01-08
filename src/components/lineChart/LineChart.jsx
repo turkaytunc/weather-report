@@ -2,15 +2,15 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import './line-chart.scss';
 
-function LineChart({ createdAt = [], label = '', metric = [] }) {
+function LineChart({ timeStamps = [], metric = [] }) {
   return (
     <div className="line-chart-container">
       <Line
         data={{
-          labels: createdAt,
+          labels: timeStamps,
           datasets: [
             {
-              label: `${label} (ms)`,
+              label: `Sıcaklık (°C)`,
               data: metric,
               borderColor: 'orangered',
               pointBackgroundColor: 'black',

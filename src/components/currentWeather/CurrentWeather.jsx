@@ -8,6 +8,8 @@ import WeatherDescription from '../weatherDescription/WeatherDescription';
 import Wind from '../wind/Wind';
 import './current-weather.scss';
 
+import LineChart from '../lineChart/LineChart';
+
 // "current": {
 //     "dt": 1609681318,
 //     "sunrise": 1609652433,
@@ -56,17 +58,21 @@ const CurrentWeather = () => {
       ) : error ? (
         'Error'
       ) : (
-        <div className="current-weather-icon-container">
-          <div className="current-weather-time-desc">
-            <CurrentTime dt={dt} />
-            <WeatherDescription desc={description} iconCode={icon} />
+        <div>
+          <div className="current-weather-icon-container">
+            <div className="current-weather-time-desc">
+              <CurrentTime dt={dt} />
+              <WeatherDescription desc={description} iconCode={icon} />
+            </div>
+            <div className="current-weather-details">
+              <Temperature temp={temp} />
+              <Humidity humidity={humidity} />
+              <Wind windSpeed={wind_speed} />
+              <Pressure pressure={pressure} />
+            </div>
           </div>
-          <div className="current-weather-details">
-            <Temperature temp={temp} />
-            <Humidity humidity={humidity} />
-            <Wind windSpeed={wind_speed} />
-            <Pressure pressure={pressure} />
-          </div>
+
+          <LineChart />
         </div>
       )}
     </div>
