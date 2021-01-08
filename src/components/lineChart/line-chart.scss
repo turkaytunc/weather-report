@@ -22,10 +22,9 @@
 
 @media screen and (min-width: 950px) {
   .line-chart-container {
-    height: 800px;
-    width: 800px;
+    height: fit-content;
+    width: 700px;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
   }
 }

@@ -27,8 +27,12 @@
 }
 
 @media screen and (min-width: 800px) {
+  .current-weather-container {
+    padding: 0.2em;
+    width: 50%;
+    margin-left: 25%;
+  }
   .current-weather-details {
-    grid-template-columns: repeat(4, 1fr);
     margin-top: 0;
     padding: 2em 0.2em;
   }
