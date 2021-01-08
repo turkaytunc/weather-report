@@ -57,18 +57,14 @@ const CurrentWeather = () => {
         'Error'
       ) : (
         <div className="current-weather-icon-container">
-          <div className="current-time-description-container">
+          <div className="current-weather-time-desc">
             <CurrentTime dt={dt} />
             <WeatherDescription desc={description} iconCode={icon} />
           </div>
-          <div>
-            <Temperature temp={temp} />
-            <Humidity humidity={humidity} />
-          </div>
-          <div>
-            <Wind windSpeed={wind_speed} />
-            <Pressure pressure={pressure} />
-          </div>
+          <Temperature temp={temp} />
+          <Humidity humidity={humidity} />
+          <Wind windSpeed={wind_speed} />
+          <Pressure pressure={pressure} />
         </div>
       )}
     </div>

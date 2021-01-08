@@ -1,11 +1,17 @@
+.current-weather-container {
+  padding: 1em;
+}
+
 .current-weather-icon-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #e8eff3;
   > div {
     margin-right: 1em;
   }
 }
-.current-time-description-container {
+.current-weather-time-desc {
   display: flex;
-  flex-direction: column;
+  align-self: start;
 }
