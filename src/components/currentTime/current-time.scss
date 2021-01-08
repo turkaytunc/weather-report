@@ -19,3 +19,9 @@
 .currenttime-hours {
   width: max-content;
 }
+
+@media screen and (min-width: 800px) {
+  .currenttime-container {
+    font-size: 2em;
+  }
+}

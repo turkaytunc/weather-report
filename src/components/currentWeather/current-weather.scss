@@ -1,5 +1,6 @@
 .current-weather-container {
-  margin: 0.2em;
+  padding: 0.2em;
+  width: 100%;
 }
 
 .current-weather-icon-container {
@@ -11,6 +12,7 @@
 .current-weather-time-desc {
   display: flex;
   align-self: start;
+  width: 100%;
 }
 
 .current-weather-details {
@@ -20,4 +22,27 @@
   row-gap: 1em;
   justify-content: space-around;
   grid-template-columns: repeat(2, 1fr);
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .current-weather-details {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 0;
+    padding: 2em 0.2em;
+  }
+
+  .current-weather-time-desc {
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+  }
+
+  .current-weather-icon-container {
+    flex-direction: row;
+    padding: 2em 1em;
+    align-items: center;
+    justify-content: center;
+  }
 }

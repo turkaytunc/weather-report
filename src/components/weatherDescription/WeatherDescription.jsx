@@ -7,7 +7,7 @@ const WeatherDescription = ({ desc, iconCode = '10d' }) => {
       <div>
         <img src={`http://openweathermap.org/img/wn/${iconCode}.png`} alt="" />
       </div>
-      <div>desc</div>
+      <div className="desc">{desc}</div>
     </div>
   );
 };
