@@ -16,7 +16,9 @@ const CurrentTime = ({ dt }) => {
       <div>{gmtFullDay}</div>
       <div className="currenttime-day-hours">
         <div>{getDayOfWeek(gmtDay)}</div>
-        <div className="currenttime-hours">{`${gmtHours}:${gmtMinutes}`}</div>
+        <div className="currenttime-hours">
+          {`${gmtHours < 10 ? '0' + gmtHours : gmtHours}:${gmtMinutes < 10 ? '0' + gmtMinutes : gmtMinutes}`}
+        </div>
       </div>
     </div>
   );
