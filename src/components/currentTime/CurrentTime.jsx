@@ -8,7 +8,7 @@ const CurrentTime = ({ dt }) => {
   const gmtHours = gmt.getHours();
   const gmtMinutes = gmt.getMinutes();
   const gmtDay = gmt.getDay();
-  const gmtFullDay = gmt.getDate();
+  const gmtFullDay = gmt.toLocaleDateString();
 
   return (
     <div className="currenttime-container">

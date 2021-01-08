@@ -1,9 +1,9 @@
 .currenttime-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: fit-content;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 0.2em;
   font-size: 1.5em;
 }
