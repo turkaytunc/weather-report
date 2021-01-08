@@ -9,6 +9,7 @@ import Wind from '../wind/Wind';
 import './current-weather.scss';
 
 import LineChart from '../lineChart/LineChart';
+import { convertWeatherDateToLocaleDate } from '../../util/convertWeatherDateToLocaleDate';
 
 // "current": {
 //     "dt": 1609681318,
@@ -51,6 +52,20 @@ const CurrentWeather = () => {
     weather: [{ description, icon }],
   } = data?.current;
 
+  const hourlyData = weather.data.hourly.map((el) => {
+    const gmt = convertWeatherDateToLocaleDate(el.dt);
+    const gmtHour = gmt.getHours() < 10 ? '0' + gmt.getHours() : gmt.getHours();
+    const gmtMin = gmt.getMinutes() < 10 ? '0' + gmt.getMinutes() : gmt.getMinutes();
+    const timeStamp = `${gmtHour}:${gmtMin}`;
+    const fixedTemp = el.temp.toFixed(2);
+    return {
+      timeStamp: timeStamp,
+      temperature: fixedTemp,
+    };
+  });
+
+  console.log(hourlyData);
+
   return (
     <div className="current-weather-container">
       {loading ? (
@@ -71,8 +86,10 @@ const CurrentWeather = () => {
               <Pressure pressure={pressure} />
             </div>
           </div>
-
-          <LineChart />
+          <LineChart
+            timeStamps={hourlyData.map((el) => el.timeStamp).filter((el, i) => i % 3 === 0)}
+            metric={hourlyData.map((el) => el.temperature).filter((el, i) => i % 3 === 0)}
+          />
         </div>
       )}
     </div>
