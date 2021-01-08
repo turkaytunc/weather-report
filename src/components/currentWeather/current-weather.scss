@@ -29,8 +29,8 @@
 @media screen and (min-width: 800px) {
   .current-weather-container {
     padding: 0.2em;
-    width: 50%;
-    margin-left: 25%;
+    width: 70%;
+    margin-left: 15%;
   }
   .current-weather-details {
     > div {
@@ -50,5 +50,13 @@
     padding: 2em 1em;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .current-weather-container {
+    padding: 0.2em;
+    width: 50%;
+    margin-left: 25%;
   }
 }
