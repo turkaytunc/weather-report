@@ -4,22 +4,28 @@
   "timezone": "Europe/Athens",
   "timezone_offset": 7200,
   "current": {
-    "dt": 1609681318,
-    "sunrise": 1609652433,
-    "sunset": 1609685767,
-    "temp": 12.22,
-    "feels_like": 10.05,
-    "pressure": 1008,
-    "humidity": 79,
-    "dew_point": 8.69,
-    "uvi": 0.04,
-    "clouds": 100,
+    "dt": 1610088155,
+    "sunrise": 1610084408,
+    "sunset": 1610118052,
+    "temp": 13.33,
+    "feels_like": 10.55,
+    "pressure": 1000,
+    "humidity": 80,
+    "dew_point": 9.96,
+    "uvi": 0.24,
+    "clouds": 99,
     "visibility": 10000,
-    "wind_speed": 2.68,
-    "wind_deg": 140,
-    "wind_gust": 4.47,
-    "weather": [{ "id": 500, "main": "Rain", "description": "hafif yağmur", "icon": "10d" }],
-    "rain": { "1h": 0.11 }
+    "wind_speed": 4.02,
+    "wind_deg": 135,
+    "wind_gust": 6.71,
+    "weather": [
+      {
+        "id": 804,
+        "main": "Clouds",
+        "description": "kapalı",
+        "icon": "04d"
+      }
+    ]
   },
   "hourly": [
     {
