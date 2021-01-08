@@ -61,10 +61,12 @@ const CurrentWeather = () => {
             <CurrentTime dt={dt} />
             <WeatherDescription desc={description} iconCode={icon} />
           </div>
-          <Temperature temp={temp} />
-          <Humidity humidity={humidity} />
-          <Wind windSpeed={wind_speed} />
-          <Pressure pressure={pressure} />
+          <div className="current-weather-details">
+            <Temperature temp={temp} />
+            <Humidity humidity={humidity} />
+            <Wind windSpeed={wind_speed} />
+            <Pressure pressure={pressure} />
+          </div>
         </div>
       )}
     </div>

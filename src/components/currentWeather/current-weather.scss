@@ -1,5 +1,5 @@
 .current-weather-container {
-  padding: 1em;
+  margin: 0.2em;
 }
 
 .current-weather-icon-container {
@@ -7,11 +7,17 @@
   flex-direction: column;
   align-items: center;
   background-color: #e8eff3;
-  > div {
-    margin-right: 1em;
-  }
 }
 .current-weather-time-desc {
   display: flex;
   align-self: start;
+}
+
+.current-weather-details {
+  width: 100%;
+  margin-top: 2em;
+  display: grid;
+  row-gap: 1em;
+  justify-content: space-around;
+  grid-template-columns: repeat(2, 1fr);
 }
