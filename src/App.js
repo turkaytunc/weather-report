@@ -1,7 +1,7 @@
 // import { useEffect } from 'react';
-import './app.scss';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { fetchWeather } from './redux/actions/weatherActions';
+import './app.scss';
 import CurrentWeather from './components/currentWeather/CurrentWeather';
 
 function App() {

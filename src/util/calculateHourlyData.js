@@ -1,6 +1,6 @@
 import { convertWeatherDateToLocaleDate } from './convertWeatherDateToLocaleDate';
 
-export const calculateHourlyData = (data) =>
+export const calculateHourlyData = (data = []) =>
   data.map((el) => {
     const gmt = convertWeatherDateToLocaleDate(el.dt);
     const gmtHour = gmt.getHours() < 10 ? '0' + gmt.getHours() : gmt.getHours();

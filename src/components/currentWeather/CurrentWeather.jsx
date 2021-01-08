@@ -43,16 +43,7 @@ const CurrentWeather = () => {
   const weather = useSelector((state) => state.weather);
   const { loading, error, data } = weather;
 
-  const {
-    dt,
-    temp,
-    pressure,
-    humidity,
-    wind_speed,
-    weather: [{ description, icon }],
-  } = data?.current;
-
-  const hourlyData = calculateHourlyData(weather.data.hourly);
+  const hourlyData = calculateHourlyData(weather.data?.hourly);
 
   return (
     <div className="current-weather-container">
@@ -64,14 +55,14 @@ const CurrentWeather = () => {
         <div>
           <div className="current-weather-icon-container">
             <div className="current-weather-time-desc">
-              <CurrentTime dt={dt} />
-              <WeatherDescription desc={description} iconCode={icon} />
+              <CurrentTime dt={data?.current?.dt} />
+              <WeatherDescription desc={data?.current?.weather.description} iconCode={data?.current?.weather.icon} />
             </div>
             <div className="current-weather-details">
-              <Temperature temp={temp} />
-              <Humidity humidity={humidity} />
-              <Wind windSpeed={wind_speed} />
-              <Pressure pressure={pressure} />
+              <Temperature temp={data?.current?.temp} />
+              <Humidity humidity={data?.current?.humidity} />
+              <Wind windSpeed={data?.current?.wind_speed} />
+              <Pressure pressure={data?.current?.pressure} />
             </div>
           </div>
           <LineChart
