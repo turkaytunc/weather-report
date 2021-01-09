@@ -14,7 +14,7 @@ const months = [
 ];
 
 export const calculateCurrentDate = (gmt) => {
-  const day = gmt.getDay() + 3;
+  const day = gmt.getDate();
   const mo = gmt.getMonth();
   const year = gmt.getFullYear();
 
