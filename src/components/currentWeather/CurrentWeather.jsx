@@ -39,7 +39,7 @@ import { calculateHourlyData } from '../../util/calculateHourlyData';
 //     }
 //     }
 
-const CurrentWeather = () => {
+const CurrentWeather = ({ currentLocation }) => {
   const weather = useSelector((state) => state.weather);
   const { loading, error, data } = weather;
 
@@ -60,6 +60,7 @@ const CurrentWeather = () => {
           }}
         >
           <div className="current-weather-icon-container">
+            <div className="current-location-text">{currentLocation}</div>
             <div className="current-weather-time-desc">
               <CurrentTime dt={data?.current?.dt} />
               <WeatherDescription

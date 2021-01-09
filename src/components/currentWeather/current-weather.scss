@@ -7,6 +7,14 @@ $text-shadow-dark: 1px 1px 1px black;
   text-shadow: $text-shadow-dark;
 }
 
+.current-location-text {
+  font-size: 2em;
+  color: #eee;
+  border-radius: 5px;
+  background-color: #555;
+  width: 100%;
+}
+
 .current-weather-icon-container {
   display: flex;
   flex-direction: column;
@@ -65,7 +73,7 @@ $text-shadow-dark: 1px 1px 1px black;
   }
 
   .current-weather-icon-container {
-    padding: 2em 1em;
+    padding: 1em 1em;
     align-items: center;
     justify-content: center;
   }

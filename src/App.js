@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="app">
       <SelectLocation setLocation={setLocation} />
-      <CurrentWeather />
+      <CurrentWeather currentLocation={location} />
     </div>
   );
 }
