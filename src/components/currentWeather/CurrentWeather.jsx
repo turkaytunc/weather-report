@@ -52,7 +52,13 @@ const CurrentWeather = () => {
       ) : error ? (
         'Error'
       ) : (
-        <div style={{ backgroundColor: '#e8eff3' }}>
+        <div
+          style={{
+            backgroundColor: '#e8eff3',
+            boxShadow: '-1px 2px 4px rgba(0,0,0,0.3),1px -1px 4px rgba(0,0,0,0.3)',
+            borderRadius: '3px',
+          }}
+        >
           <div className="current-weather-icon-container">
             <div className="current-weather-time-desc">
               <CurrentTime dt={data?.current?.dt} />
