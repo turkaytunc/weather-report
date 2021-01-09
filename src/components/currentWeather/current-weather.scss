@@ -1,8 +1,10 @@
 $text-color-light: #eee;
+$text-shadow-dark: 1px 1px 1px black;
 
 .current-weather-container {
   padding: 0.2em;
   width: 100%;
+  text-shadow: $text-shadow-dark;
 }
 
 .current-weather-icon-container {
@@ -32,6 +34,7 @@ $text-color-light: #eee;
   border-radius: 5px;
   background-color: #555;
   color: $text-color-light;
+  padding: 1em 0;
 }
 
 @media screen and (min-width: 800px) {
