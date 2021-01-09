@@ -35,6 +35,11 @@ $text-shadow-dark: 1px 1px 1px black;
   background-color: #555;
   color: $text-color-light;
   padding: 1em 0;
+  > div {
+    font-size: 1.5em;
+    justify-content: start;
+    padding-left: 1em;
+  }
 }
 
 @media screen and (min-width: 800px) {
