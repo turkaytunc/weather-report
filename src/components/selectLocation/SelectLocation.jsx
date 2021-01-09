@@ -11,5 +11,5 @@ const countries = [
 ];
 
 export const SelectLocation = ({ setLocation = () => null }) => {
-  return <SelectSearch onChange={setLocation} options={countries} search placeholder="Select your country" />;
+  return <SelectSearch onChange={setLocation} options={countries} search placeholder="Şehir seç.." />;
 };
