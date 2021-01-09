@@ -11,13 +11,7 @@
 
 @media screen and (min-width: 400px) {
   .line-chart-container {
-    height: 300px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .line-chart-container {
-    height: 350px;
+    height: 400px;
   }
 }
 
@@ -28,5 +22,6 @@
     justify-content: center;
     align-items: center;
     margin: 0 15%;
+    padding-bottom: 1em;
   }
 }
