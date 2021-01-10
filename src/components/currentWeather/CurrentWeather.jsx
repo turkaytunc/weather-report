@@ -11,34 +11,6 @@ import './current-weather.scss';
 import LineChart from '../lineChart/LineChart';
 import { calculateHourlyData } from '../../util/calculateHourlyData';
 
-// "current": {
-//     "dt": 1609681318,
-//     "sunrise": 1609652433,
-//     "sunset": 1609685767,
-//     "temp": 12.22,
-//     "feels_like": 10.05,
-//     "pressure": 1008,
-//     "humidity": 79,
-//     "dew_point": 8.69,
-//     "uvi": 0.04,
-//     "clouds": 100,
-//     "visibility": 10000,
-//     "wind_speed": 2.68,
-//     "wind_deg": 140,
-//     "wind_gust": 4.47,
-//     "weather": [
-//     {
-//     "id": 500,
-//     "main": "Rain",
-//     "description": "hafif yağmur",
-//     "icon": "10d"
-//     }
-//     ],
-//     "rain": {
-//     "1h": 0.11
-//     }
-//     }
-
 const CurrentWeather = ({ currentLocation }) => {
   const weather = useSelector((state) => state.weather);
   const { loading, error, data } = weather;
