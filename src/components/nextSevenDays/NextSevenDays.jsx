@@ -35,7 +35,7 @@ const NextSixDays = () => {
         'Error'
       ) : (
         <div>
-          <h2>Haftalık Hava Durumu</h2>
+          <h1>Haftalık Hava Durumu</h1>
           <div className="daily-weather-grid-container">
             {slicedData.map((e) => (
               <div className="daily-weather-item">
