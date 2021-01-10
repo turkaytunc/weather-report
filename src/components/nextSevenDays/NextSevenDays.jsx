@@ -16,13 +16,14 @@ const NextSixDays = () => {
     ?.map((e) => {
       const gmt = convertWeatherDateToLocaleDate(e.dt);
       const timeString = calculateCurrentDate(gmt);
+      console.log(e.weather);
       return {
         timeString,
         temp: e.temp?.day,
         humidity: e.humidity,
         pressure: e.pressure,
         wind: e.wind_speed,
-        icon: e.weather.icon,
+        icon: e.weather[0].icon,
       };
     })
     .slice(1);
@@ -37,7 +38,12 @@ const NextSixDays = () => {
         <div className="daily-weather-grid-container">
           {weatherData.map((e) => (
             <div className="daily-weather-item">
-              <div className="daily-weather-time">{e.timeString}</div>
+              <div>
+                <div className="daily-weather-time">
+                  {e.timeString}
+                  <img src={`http://openweathermap.org/img/wn/${e.icon}.png`} alt="weather" />
+                </div>
+              </div>
               <div className="daily-weather-icons">
                 <Temperature temp={e.temp} />
                 <Wind windSpeed={e.wind} />

@@ -7,17 +7,26 @@
 .daily-weather-item {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5em;
+  margin-top: 0.4em;
 }
 
 .daily-weather-time {
-  background-color: #4babe2;
-  padding: 0.2em 0;
+  background-color: #1582b4;
   font-size: 1.1em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .daily-weather-icons {
   display: flex;
   padding: 0.5em 0;
   background-color: aliceblue;
+  > div {
+    border-left: 1px solid #ccc;
+  }
+  div:first-child {
+    border: none;
+  }
 }
