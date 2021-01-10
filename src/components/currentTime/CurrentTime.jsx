@@ -6,10 +6,10 @@ import './current-time.scss';
 
 const CurrentTime = ({ dt }) => {
   const gmt = convertWeatherDateToLocaleDate(dt);
+  const gmtFullDay = calculateCurrentDate(gmt);
   const gmtHours = gmt.getHours();
   const gmtMinutes = gmt.getMinutes();
   const gmtDay = gmt.getDay();
-  const gmtFullDay = calculateCurrentDate(gmt);
 
   return (
     <div className="currenttime-container">
