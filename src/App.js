@@ -12,16 +12,16 @@ function App() {
 
   const [location, setLocation] = useState('Edirne');
 
-  // useEffect(() => {
-  //   let isMounted = true;
+  useEffect(() => {
+    let isMounted = true;
 
-  //   if (isMounted) {
-  //     dispatch(fetchWeather(location));
-  //   }
-  //   return () => {
-  //     isMounted = false;
-  //   };
-  // }, [dispatch, location]);
+    if (isMounted) {
+      dispatch(fetchWeather(location));
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, [dispatch, location]);
 
   return (
     <div className="app">
