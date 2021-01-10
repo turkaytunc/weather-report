@@ -12,20 +12,20 @@ const NextSixDays = () => {
   const weather = useSelector((state) => state.weather);
   const { loading, error, data } = weather;
 
-  const weatherData = data?.daily
-    ?.map((e) => {
-      const gmt = convertWeatherDateToLocaleDate(e.dt);
-      const timeString = calculateCurrentDate(gmt);
-      return {
-        timeString,
-        temp: e.temp?.day,
-        humidity: e.humidity,
-        pressure: e.pressure,
-        wind: e.wind_speed,
-        icon: e.weather[0].icon,
-      };
-    })
-    .slice(1);
+  const weatherData = data?.daily?.map((e) => {
+    const gmt = convertWeatherDateToLocaleDate(e.dt);
+    const timeString = calculateCurrentDate(gmt);
+    return {
+      timeString,
+      temp: e.temp?.day,
+      humidity: e.humidity,
+      pressure: e.pressure,
+      wind: e.wind_speed,
+      icon: e.weather[0].icon,
+    };
+  });
+
+  const slicedData = weatherData.slice(1, weatherData.length - 1);
 
   return (
     <div>
@@ -34,23 +34,26 @@ const NextSixDays = () => {
       ) : error ? (
         'Error'
       ) : (
-        <div className="daily-weather-grid-container">
-          {weatherData.map((e) => (
-            <div className="daily-weather-item">
-              <div>
-                <div className="daily-weather-time">
-                  {e.timeString}
-                  <img src={`http://openweathermap.org/img/wn/${e.icon}.png`} alt="weather" />
+        <div>
+          <h2>Haftalık Hava Durumu</h2>
+          <div className="daily-weather-grid-container">
+            {slicedData.map((e) => (
+              <div className="daily-weather-item">
+                <div>
+                  <div className="daily-weather-time">
+                    {e.timeString}
+                    <img src={`http://openweathermap.org/img/wn/${e.icon}.png`} alt="weather" />
+                  </div>
+                </div>
+                <div className="daily-weather-icons">
+                  <Temperature temp={e.temp} />
+                  <Wind windSpeed={e.wind} />
+                  <Pressure pressure={e.pressure} />
+                  <Humidity humidity={e.humidity} />
                 </div>
               </div>
-              <div className="daily-weather-icons">
-                <Temperature temp={e.temp} />
-                <Wind windSpeed={e.wind} />
-                <Pressure pressure={e.pressure} />
-                <Humidity humidity={e.humidity} />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </div>

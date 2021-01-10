@@ -2,6 +2,7 @@
   display: grid;
   background-color: #555;
   grid-template-columns: repeat(1, minmax(200px, 1fr));
+  padding-bottom: 0.5em;
 }
 
 .daily-weather-item {
