@@ -5,7 +5,7 @@ import { fetchWeather } from './redux/actions/weatherActions';
 import './app.scss';
 import CurrentWeather from './components/currentWeather/CurrentWeather';
 import { SelectLocation } from './components/selectLocation/SelectLocation';
-import NextSixDays from './components/nextSevenDays/NextSevenDays';
+import NextSixDays from './components/nextSixDays/NextSixDays';
 
 function App() {
   const dispatch = useDispatch();
