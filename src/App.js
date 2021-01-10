@@ -5,6 +5,7 @@ import { fetchWeather } from './redux/actions/weatherActions';
 import './app.scss';
 import CurrentWeather from './components/currentWeather/CurrentWeather';
 import { SelectLocation } from './components/selectLocation/SelectLocation';
+import NextSixDays from './components/nextSevenDays/NextSevenDays';
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function App() {
     <div className="app">
       <SelectLocation setLocation={setLocation} />
       <CurrentWeather currentLocation={location} />
+      <NextSixDays />
     </div>
   );
 }

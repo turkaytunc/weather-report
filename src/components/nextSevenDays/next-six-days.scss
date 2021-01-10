@@ -1,0 +1,23 @@
+.daily-weather-grid-container {
+  display: grid;
+  background-color: #555;
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
+}
+
+.daily-weather-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+}
+
+.daily-weather-time {
+  background-color: #4babe2;
+  padding: 0.2em 0;
+  font-size: 1.1em;
+}
+
+.daily-weather-icons {
+  display: flex;
+  padding: 0.5em 0;
+  background-color: aliceblue;
+}
