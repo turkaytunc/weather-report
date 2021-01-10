@@ -25,7 +25,7 @@ const NextSixDays = () => {
     };
   });
 
-  const slicedData = weatherData.slice(1, weatherData.length - 1);
+  const slicedData = weatherData?.slice(1, weatherData?.length - 1);
 
   return (
     <div>
@@ -38,7 +38,7 @@ const NextSixDays = () => {
           <h1>Haftalık Hava Durumu</h1>
           <div className="daily-weather-grid-container">
             {slicedData.map((e) => (
-              <div className="daily-weather-item">
+              <div key={e.timeString} className="daily-weather-item">
                 <div>
                   <div className="daily-weather-time">
                     {e.timeString}
