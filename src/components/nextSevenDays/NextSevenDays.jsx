@@ -16,7 +16,6 @@ const NextSixDays = () => {
     ?.map((e) => {
       const gmt = convertWeatherDateToLocaleDate(e.dt);
       const timeString = calculateCurrentDate(gmt);
-      console.log(e.weather);
       return {
         timeString,
         temp: e.temp?.day,
