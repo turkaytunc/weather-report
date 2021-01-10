@@ -6,6 +6,7 @@ import './app.scss';
 import CurrentWeather from './components/currentWeather/CurrentWeather';
 import { SelectLocation } from './components/selectLocation/SelectLocation';
 import NextSixDays from './components/nextSixDays/NextSixDays';
+import Footer from './components/footer/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function App() {
       <SelectLocation setLocation={setLocation} />
       <CurrentWeather currentLocation={location} />
       <NextSixDays />
+      <Footer />
     </div>
   );
 }
