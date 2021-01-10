@@ -30,3 +30,20 @@
     border: none;
   }
 }
+
+@media screen and (min-width: 800px) {
+  .daily-weather-grid-container {
+    width: 70%;
+    margin-left: 15%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .daily-weather-icons {
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+  .daily-weather-time {
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+}
