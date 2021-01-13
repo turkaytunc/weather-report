@@ -5,16 +5,16 @@ export const SelectLocation = ({ setLocation = () => null }) => {
   const [userInput, setUserInput] = useState('edirne');
 
   const handleLocation = () => {
+    if (userInput === '') return;
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
     )
       .then((data) => data.json())
       .then((data) => {
         const locationObj = { name: userInput, longitude: '0', latitude: '0' };
-        locationObj.latitude = data.coord.lat;
-        locationObj.longitude = data.coord.lon;
+        locationObj.latitude = data?.coord?.lat || 0;
+        locationObj.longitude = data?.coord?.lon || 0;
         setLocation(locationObj);
-        console.log(locationObj);
       });
   };
 
