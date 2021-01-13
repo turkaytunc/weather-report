@@ -32,7 +32,7 @@ const CurrentWeather = ({ currentLocation }) => {
           }}
         >
           <div className="current-weather-icon-container">
-            <div className="current-location-text">{currentLocation}</div>
+            <div className="current-location-text">{currentLocation.name}</div>
             <div className="current-weather-time-desc">
               <CurrentTime dt={data?.current?.dt} />
               <WeatherDescription

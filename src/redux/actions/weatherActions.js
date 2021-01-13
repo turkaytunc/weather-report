@@ -1,13 +1,10 @@
 import { fetchWeatherData } from '../../util/fetchWeatherData';
-import { getLocation } from '../../util/getLocation';
 import { WEATHER_FAIL, WEATHER_REQUEST, WEATHER_SUCCESS } from '../constants/weatherConstants';
 
-export const fetchWeather = (item) => async (dispatch) => {
-  const location = getLocation(item);
-
+export const fetchWeather = (location = { latitude: '41.667', longitude: '26.572' }) => async (dispatch) => {
   const weatherFetchUrl = {
-    latitude: location[0].latitude,
-    longitude: location[0].longitude,
+    latitude: location.latitude,
+    longitude: location.longitude,
     apiKey: process.env.REACT_APP_API_KEY,
     units: 'metric',
     language: 'tr',

@@ -11,7 +11,7 @@ import Footer from './components/footer/Footer';
 function App() {
   const dispatch = useDispatch();
 
-  const [location, setLocation] = useState('Edirne');
+  const [location, setLocation] = useState({ latitude: '0', longitude: '0' });
 
   useEffect(() => {
     let isMounted = true;
