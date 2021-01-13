@@ -6,7 +6,7 @@ export const SelectLocation = ({ setLocation = () => null }) => {
 
   const handleLocation = () => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
     )
       .then((data) => data.json())
       .then((data) => {
