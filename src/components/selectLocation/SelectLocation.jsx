@@ -19,9 +19,16 @@ export const SelectLocation = ({ setLocation = () => null }) => {
   };
 
   return (
-    <div>
-      <input onChange={(e) => setUserInput(e.target.value)} value={userInput} placeholder="Şehir ismi..(ingilizce)" />
-      <button onClick={() => handleLocation()}>Veriyi Getir</button>
+    <div className="search-container">
+      <input
+        className="search-input"
+        onChange={(e) => setUserInput(e.target.value)}
+        value={userInput}
+        placeholder="Şehir ismi.."
+      />
+      <button className="search-button" onClick={() => handleLocation()}>
+        Veriyi Getir
+      </button>
     </div>
   );
 };
