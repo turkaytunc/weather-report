@@ -21,9 +21,15 @@ export const SelectLocation = ({ setLocation = () => null }) => {
   return (
     <div className="search-container">
       <input
+        tabIndex={0}
         className="search-input"
         onChange={(e) => setUserInput(e.target.value)}
         value={userInput}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            handleLocation();
+          }
+        }}
         placeholder="Şehir ismi.."
       />
       <button className="search-button" onClick={() => handleLocation()}>
