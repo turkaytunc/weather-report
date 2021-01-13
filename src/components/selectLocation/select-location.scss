@@ -3,14 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid aliceblue;
+  border: none;
 }
 
 .search-input {
   width: 100%;
   height: 2em;
   border-radius: 3px;
-  border: 1px solid rgb(94, 250, 198);
+  border: 1px solid rgb(14, 51, 39);
   padding-left: 1em;
   font-size: 1.2em;
   &:focus {
@@ -32,17 +32,35 @@
 }
 
 @media screen and (min-width: 800px) {
-  .select-search {
+  .search-container {
     width: 70%;
     margin: 0 15%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .select-search {
+  .search-container {
     width: 50%;
     margin-left: 25%;
     margin-top: 1em;
     box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.377);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .search-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-button {
+    width: 25%;
+    margin-top: 0;
+    height: 1.5em;
+  }
+
+  .search-input {
+    margin-right: 5%;
+    width: 70%;
+    height: 1.5em;
   }
 }
